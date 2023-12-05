@@ -38,8 +38,8 @@ const createTask = function () {
     /* popola list item */
     /* paragrafo */
     let taskDiv = document.createElement("div");
-    taskDiv.classList.add("col-12");
-    taskDiv.classList.add("col-md-10");
+    taskDiv.classList.add("col-10");
+    //taskDiv.classList.add("col-md-10");
 
     let taskPar = document.createElement("p");
     taskPar.classList.add("text-primary");
@@ -57,8 +57,8 @@ const createTask = function () {
     btn2.classList.add("ms-auto");
     btn2.classList.add("deleteTask");
     btn2.classList.add("fs-4");
-    btn2.classList.add("col-12");
-    btn2.classList.add("col-md-2");
+    btn2.classList.add("col-2");
+    //btn2.classList.add("col-md-2");
     btn2.classList.add("text-secondary");
     btn2.innerHTML = '<i class="bi bi-trash-fill"></i>';
     li.appendChild(btn2);
