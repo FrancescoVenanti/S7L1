@@ -32,17 +32,24 @@ const createTask = function () {
     li.classList.add("rounded-3");
     li.classList.add("p-3");
     li.classList.add("mt-3");
-    li.classList.add("d-flex");
+    li.classList.add("row");
     li.classList.add("align-items-center");
     li.classList.add("singleTask");
     /* popola list item */
     /* paragrafo */
+    let taskDiv = document.createElement("div");
+    taskDiv.classList.add("col-12");
+    taskDiv.classList.add("col-md-10");
+
     let taskPar = document.createElement("p");
     taskPar.classList.add("text-primary");
     taskPar.classList.add("fs-4");
     taskPar.classList.add("m-0");
+    taskPar.classList.add("text-break");
+
     taskPar.innerText = newTask.value;
-    li.appendChild(taskPar);
+    taskDiv.appendChild(taskPar);
+    li.appendChild(taskDiv);
     /* bottoni */
     let btn2 = document.createElement("button");
     btn2.classList.add("btn");
@@ -50,6 +57,8 @@ const createTask = function () {
     btn2.classList.add("ms-auto");
     btn2.classList.add("deleteTask");
     btn2.classList.add("fs-4");
+    btn2.classList.add("col-12");
+    btn2.classList.add("col-md-2");
     btn2.classList.add("text-secondary");
     btn2.innerHTML = '<i class="bi bi-trash-fill"></i>';
     li.appendChild(btn2);
